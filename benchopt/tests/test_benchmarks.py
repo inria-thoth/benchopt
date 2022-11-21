@@ -237,4 +237,4 @@ def _test_solver_one_objective(solver, objective):
                     [b + 1e-5 * np.random.randn(*b.shape) for b in beta_hat])
 
             diff = val_eps - val_star
-            assert diff >= 0
+            assert diff.all() >= 0
